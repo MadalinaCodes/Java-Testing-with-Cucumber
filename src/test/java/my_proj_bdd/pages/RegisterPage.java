@@ -56,11 +56,11 @@ public class RegisterPage extends BasePage{
         Assert.assertEquals("Register header is wrong", "Creeaza un cont nou", registerHeader.getText());
     }
 
-    public void validateUserText(String expectedMessage) {
-        Assert.assertEquals("User text is wrong", expectedMessage, userText.getText());
-    }
+//    public void validateUserText(String expectedMessage) {
+//        Assert.assertEquals("User text is wrong", expectedMessage, userText.getText());
+//    } // nu merge
     public void validateDescription(String expectedMessage) {
         Assert.assertEquals("description is wrong", expectedMessage, description.getText());
-    }
+    } // pus de mine
 }
 

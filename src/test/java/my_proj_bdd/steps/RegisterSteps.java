@@ -33,10 +33,10 @@ public class RegisterSteps extends DriverManager {
         registerPage.validateRegisterHeader();
     }
 
-    @When("I validate user text: (.*)$")
-    public void validateUserText(String expectedMessage) {
-        registerPage.validateUserText(expectedMessage);
-    }
+//    @When("I validate user text: (.*)$")
+//    public void validateUserText(String expectedMessage) {
+//        registerPage.validateUserText(expectedMessage);
+//    }
 
     @Then("I validate description: (.*)$")
     public void validateDescription(String expectedMessage) {

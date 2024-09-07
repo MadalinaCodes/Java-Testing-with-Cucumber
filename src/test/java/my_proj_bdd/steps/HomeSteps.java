@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import my_proj_bdd.driver.DriverManager;
 import my_proj_bdd.pages.HomePage;
 
+
 public class HomeSteps extends DriverManager {
 
     HomePage homePage = new HomePage(driver);
@@ -25,4 +26,13 @@ public class HomeSteps extends DriverManager {
     public void clickContulMeu() {
         homePage.clickContulMeuButton();
     }
+
+    @When("I click 'Shopping Cart' button")
+    public void clickShoppingCart() {
+        homePage.clickShoppingCartButton();
+    }
+
+    @When("I click 'Adauga' button with index: (.*)$")
+    public void clickAdauga(String index) {
+        homePage.clickAddToBasketButtonByIndex(index); }
 }

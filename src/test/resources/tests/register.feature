@@ -4,6 +4,7 @@ Feature: Register
     Given I am a user on Mega Image home page
     Then I validate cookie header and click accept cookies button
     When I click 'Contul meu' button
+    Then I validate 'Contul meu' url is correct
 
   Scenario: Negative: Missing phone/email
     When I click 'Continua' button

@@ -19,7 +19,7 @@ public class RegisterPage extends BasePage{
     @FindBy(xpath = "//p[@data-testid='form-error-message']")
     private WebElement validationErrorMessage;
 
-    @FindBy(xpath = "//input[@data-testid='input-field']")
+    @FindBy(xpath = "//input[@data-testid='uid-input']")
     private WebElement emailPhoneInput;
 
     @FindBy(xpath = "//h2[@data-testid='create-account-title']")

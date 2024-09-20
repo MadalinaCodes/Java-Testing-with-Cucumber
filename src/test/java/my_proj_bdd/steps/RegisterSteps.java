@@ -8,6 +8,11 @@ import my_proj_bdd.pages.RegisterPage;
 public class RegisterSteps extends DriverManager {
     RegisterPage registerPage = new RegisterPage(driver);
 
+    @Then("I validate 'Contul meu' url is correct")
+    public void validateCartUrl() {
+        registerPage.validatePageURL("/reg/welcome");
+    }
+
     @When("I click 'Continua' button")
     public void clickContinue() {
         registerPage.clickContinueButton();

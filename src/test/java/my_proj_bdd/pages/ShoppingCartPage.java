@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.NoSuchElementException;
+
 public class ShoppingCartPage extends BasePage{
     public ShoppingCartPage(WebDriver driver) { super(driver); }
 
     // Elemente
-    @FindBy(xpath = "//button[@data-testid='dialog-close-button']")
-    private WebElement closePopUp;
 
     @FindBy(xpath = "//span[@data-testid='basket-icon-to-remove-product']")
     private WebElement removeProductButton;
@@ -19,11 +19,8 @@ public class ShoppingCartPage extends BasePage{
     private WebElement emptyBasketMessage;
 
     // Actiuni
-    public void clickClosePopUp() {
-        closePopUp.click();
-    }
 
-    public void clickRemoveProductButton() {
+   public void clickRemoveProductButton() {
         removeProductButton.click();
     }
 

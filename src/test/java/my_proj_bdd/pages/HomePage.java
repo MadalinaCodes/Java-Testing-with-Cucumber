@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
@@ -50,7 +51,7 @@ public class HomePage extends BasePage {
         // declar indexul ca si int cu o sintaxa care transforma in integer valoarea unui string
         int index_as_int = Integer.valueOf(index);
         //gasim elementul
-        WebElement elem= addToBasketButtonsAsList.get(index_as_int);  // ex input string "1" => 1
+        WebElement elem = addToBasketButtonsAsList.get(index_as_int);  // ex input string "1" => 1
         // facem scroll catre element
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", elem);
         // mai facem un mic scroll in jos
@@ -60,7 +61,7 @@ public class HomePage extends BasePage {
         executor.executeScript("arguments[0].click();", elem);
         //asteptam o secunda sa se adauge produsul in cod
         try {
-            Thread.sleep(1000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
